@@ -123,7 +123,7 @@
         window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
         var pid = "35";
         var script_elm = document.createElement("script");
-        script_elm.src = "http://gcapps.local/tracking/sitest_js?p=" + pid + "&dynamic=true";
+        script_elm.src = "//localhost/tracking/sitest_js?p=" + pid + "&dynamic=true";
         script_elm.async = true;
         document.head.appendChild(script_elm);
       })();
