@@ -132,6 +132,8 @@
 
     <script>
 (function(){
+
+
   var sitest_custom_dimension;
 
   function checkSitestObject () {
@@ -142,6 +144,7 @@
     }
     if (sitestObject !== null) {
       sitest.custom_dimension_for({test:'huhuhu'});
+            sitest.achieve_for({gid:36776, sid:1});
       clearInterval(sitest_custom_dimension);
     }
   }
