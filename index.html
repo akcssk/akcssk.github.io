@@ -107,6 +107,100 @@
                 <p>特に意味のある内容はありませんが、見た目はそれっぽくなるようにスタイルを当てています。</p>
             </div>
         </div>
+
+
+        <form>
+  <h2>個人情報入力（テスト）</h2>
+
+  <p>
+    <label>
+      氏名：
+      <input type="text" name="name" placeholder="山田 太郎" required>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      フリガナ：
+      <input type="text" name="kana" placeholder="ヤマダ タロウ">
+    </label>
+  </p>
+
+  <p>
+    <label>
+      生年月日：
+      <input type="date" name="birthday" required>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      性別：
+      <select name="gender">
+        <option value="">選択してください</option>
+        <option value="male">男性</option>
+        <option value="female">女性</option>
+        <option value="other">その他</option>
+        <option value="na">未回答</option>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      メール：
+      <input type="email" name="email" placeholder="test@example.com" required>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      電話番号：
+      <input type="tel" name="tel" placeholder="090-1234-5678" pattern="^\d{2,4}-\d{2,4}-\d{3,4}$">
+    </label>
+  </p>
+
+  <p>
+    <label>
+      郵便番号：
+      <input type="text" name="zip" placeholder="123-4567" pattern="^\d{3}-\d{4}$">
+    </label>
+  </p>
+
+  <p>
+    <label>
+      住所：
+      <input type="text" name="address" placeholder="東京都渋谷区〇〇1-2-3" required>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      マイナンバー（ダミー）：
+      <input type="text" name="mynumber" placeholder="123456789012" pattern="^\d{12}$">
+    </label>
+  </p>
+
+  <p>
+    <label>
+      備考：
+      <textarea name="note" rows="3" placeholder="テスト用メモ"></textarea>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      <input type="checkbox" name="agree" required>
+      個人情報の取扱いに同意します（テスト）
+    </label>
+  </p>
+
+  <p>
+    <button type="submit">送信（ダミー）</button>
+    <button type="reset">リセット</button>
+  </p>
+</form>
+
     </main>
 
     <footer class="main-footer">
