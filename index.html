@@ -227,29 +227,6 @@
     
 </script>
 
-    <script>
-(function(){
-
-
-  var sitest_custom_dimension;
-
-  function checkSitestObject () {
-    try {
-      var sitestObject = sitest;
-    } catch (e) {
-      var sitestObject = null;
-    }
-    if (sitestObject !== null) {
-      sitest.custom_dimension_for({test:'huhuhu'});
-            sitest.achieve_for({gid:36776, sid:1});
-        
-      clearInterval(sitest_custom_dimension);
-    }
-  }
-
-sitest_custom_dimension = setInterval(checkSitestObject, 500);
-})();
-</script>
 
 </body>
 </html>
