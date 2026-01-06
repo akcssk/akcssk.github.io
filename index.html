@@ -216,14 +216,31 @@
 //   script.async = true;
 //   document.head.appendChild(script);
 // })("35");
-      (function(){
-        window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
-        var pid = "35";
-        var script_elm = document.createElement("script");
-        script_elm.src = "//localhost/tracking/sitest_js?p=" + pid + "&dynamic=true";
-        script_elm.async = true;
-        document.head.appendChild(script_elm);
-      })();
+      // (function(){
+      //   window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
+      //   var pid = "35";
+      //   var script_elm = document.createElement("script");
+      //   script_elm.src = "//localhost/tracking/sitest_js?p=" + pid + "&dynamic=true";
+      //   script_elm.async = true;
+      //   document.head.appendChild(script_elm);
+      // })();
+
+    <script>
+(function(PID){
+  var dev = "";
+  if (navigator.userAgent){
+    dev = navigator.userAgent.match(/(android.*mobile|iphone|ipod|mobilessafari|iemobile|operasmini|windowssphone)/i)? "(sp)": "(pc)";
+  }else{
+    dev = "";
+  }
+  var name = dev + decodeURIComponent(location.hostname + location.pathname);
+  var script = document.createElement("script");
+  script.src = "https://tracking.sitest.jp/tag?p=" + PID + "&u=" + encodeURIComponent(location.origin + location.pathname + location.search) + "&n=" + name;
+  script.async = true;
+  document.head.appendChild(script);
+})("p695c7f31dc86a");
+</script>
+
     
 </script>
 
