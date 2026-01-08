@@ -210,40 +210,28 @@
         <p>&copy; 2025 適当なフッター</p>
     </footer>
 <script>
+// 新タグローカル
 // (function(PID){
 //   var script = document.createElement("script");
 //   script.src = "http://localhost:8080/tag?p=" + PID + "&u=" + encodeURIComponent(location.origin + location.pathname + location.search);
 //   script.async = true;
 //   document.head.appendChild(script);
 // })("35");
-      // (function(){
-      //   window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
-      //   var pid = "35";
-      //   var script_elm = document.createElement("script");
-      //   script_elm.src = "//localhost/tracking/sitest_js?p=" + pid + "&dynamic=true";
-      //   script_elm.async = true;
-      //   document.head.appendChild(script_elm);
-      // })();    
+
+    //旧タグローカル
+      (function(){
+        window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
+        var pid = "35";
+        var script_elm = document.createElement("script");
+        script_elm.src = "//localhost/tracking/sitest_js?p=" + pid + "&dynamic=true";
+        script_elm.async = true;
+        document.head.appendChild(script_elm);
+      })();    
 </script>
 
 
-<script>
-
-    // tracking-dev.sitest.jp
-// (function(PID){
-//   var dev = "";
-//   if (navigator.userAgent){
-//     dev = navigator.userAgent.match(/(android.*mobile|iphone|ipod|mobilessafari|iemobile|operasmini|windowssphone)/i)? "(sp)": "(pc)";
-//   }else{
-//     dev = "";
-//   }
-//   var name = dev + decodeURIComponent(location.hostname + location.pathname);
-//   var script = document.createElement("script");
-//   script.src = "https://dev.sitest.jp/tracking?p=" + PID + "&u=" + encodeURIComponent(location.origin + location.pathname + location.search) + "&n=" + name;
-//   script.async = true;
-//   document.head.appendChild(script);
-// })("p695c7f31dc86a");
-
+<!-- <script>
+// 旧タグdev
  (function(){
         window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
         var pid = "p695c7f31dc86a";
@@ -253,6 +241,6 @@
         document.head.appendChild(script_elm);
       })();  
     
-</script>
+</script> -->
 </body>
 </html>
