@@ -218,24 +218,24 @@
 //  script.async = true;
 //  document.head.appendChild(script);
 // })("35");
-    //旧タグローカル
-       (function(){
-         window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
-         var pid = '6125b557b6c9f';
-         // var pid = '35';
-         var script_elm = document.createElement("script");
-         // script_elm.src = "https://gcapps.local/tracking/sitest_js?p=" + pid + "&dynamic=true";
-         script_elm.src = "https://dev.sitest.jp/tracking/sitest_js?p=" + pid + "&dynamic=true";
-         script_elm.async = true;
-         document.head.appendChild(script_elm);
-       })();   
+    //旧タグローカルとdev
+       // (function(){
+       //   window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
+       //   var pid = '6125b557b6c9f';
+       //   // var pid = '35';
+       //   var script_elm = document.createElement("script");
+       //   // script_elm.src = "https://gcapps.local/tracking/sitest_js?p=" + pid + "&dynamic=true";
+       //   script_elm.src = "https://dev.sitest.jp/tracking/sitest_js?p=" + pid + "&dynamic=true";
+       //   script_elm.async = true;
+       //   document.head.appendChild(script_elm);
+       // })();   
 
-// (function(PID){
-//  var script = document.createElement("script");
-//  script.src = "https://tracking-dev.sitest.jp/tag?p=" + PID + "&u=" + encodeURIComponent(location.origin + location.pathname + location.search);
-//  script.async = true;
-//  document.head.appendChild(script);
-// })("p699d1487386dc");
+(function(PID){
+ var script = document.createElement("script");
+ script.src = "https://tracking-dev.sitest.jp/tag?p=" + PID + "&u=" + encodeURIComponent(location.origin + location.pathname + location.search);
+ script.async = true;
+ document.head.appendChild(script);
+})("p699d1487386dc");
 
 </script>
 </body>
