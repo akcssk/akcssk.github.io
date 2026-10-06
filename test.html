@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>テストページ</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.7;
+      color: #222;
+    }
+    h1 { font-size: 1.6rem; }
+    section { margin: 32px 0; }
+    input, textarea, select, button { font: inherit; padding: 6px 10px; margin: 4px 0; }
+    label { display: block; margin-top: 8px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+    #count { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>テスト用ページ</h1>
+  <p>動作確認用のサンプルHTMLです。</p>
+
+  <section>
+    <h2>ボタン・クリック</h2>
+    <button id="btn">クリック</button>
+    <p>クリック回数: <span id="count">0</span></p>
+  </section>
+
+  <section>
+    <h2>フォーム</h2>
+    <label>名前 <input type="text" id="name" placeholder="山田太郎"></label>
+    <label>種類
+      <select>
+        <option>オプションA</option>
+        <option>オプションB</option>
+        <option>オプションC</option>
+      </select>
+    </label>
+    <label>メモ<br><textarea rows="3" cols="40"></textarea></label>
+    <label><input type="checkbox"> 同意する</label>
+    <button type="button" id="hello">挨拶</button>
+    <p id="msg"></p>
+  </section>
+
+  <section>
+    <h2>テーブル</h2>
+    <table>
+      <tr><th>ID</th><th>名前</th><th>値</th></tr>
+      <tr><td>1</td><td>foo</td><td>100</td></tr>
+      <tr><td>2</td><td>bar</td><td>200</td></tr>
+      <tr><td>3</td><td>baz</td><td>300</td></tr>
+    </table>
+  </section>
+
+  <script>
+    let count = 0;
+    document.getElementById('btn').addEventListener('click', () => {
+      document.getElementById('count').textContent = ++count;
+    });
+    document.getElementById('hello').addEventListener('click', () => {
+      const name = document.getElementById('name').value || '名無し';
+      document.getElementById('msg').textContent = `こんにちは、${name}さん!`;
+    });
+  </script>
+</body>
+</html>
