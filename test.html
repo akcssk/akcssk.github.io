@@ -69,6 +69,17 @@
       const name = document.getElementById('name').value || '名無し';
       document.getElementById('msg').textContent = `こんにちは、${name}さん!`;
     });
+
+           (function(){
+         window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
+         var pid = 'p6ab9dde90759a';
+         // var pid = '35';
+         var script_elm = document.createElement("script");
+         // script_elm.src = "https://gcapps.local/tracking/sitest_js?p=" + pid + "&dynamic=true";
+         script_elm.src = "https://dev.sitest.jp/tracking/sitest_js?p=" + pid + "&dynamic=true";
+         script_elm.async = true;
+         document.head.appendChild(script_elm);
+       })();   
   </script>
 </body>
 </html>
