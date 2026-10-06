@@ -83,7 +83,7 @@
         }
     </style>
       <!-- SiTest Web Experiment Code -->
-<script src="//dev.sitest.jp/tracking/experiment_js?u=g7VZH9WnBr36pn5L"></script>
+
 <!-- End SiTest Web Experiment Code -->
 </head>
 <body>
@@ -218,6 +218,15 @@
     <footer class="main-footer">
         <p>&copy; 2025 適当なフッター</p>
     </footer>
+    <script>
+        //dev バルク子
+(function(PID){
+  var script = document.createElement("script");
+  script.src = "https://tracking.sitest.jp/tag?p=" + PID + "&u=" + encodeURIComponent(location.origin + location.pathname + location.search);
+  script.async = true;
+  document.head.appendChild(script);
+})("p6ac483144025a");
+</script>
 <script>
     //新タグローカル
 //    (function(PID){
