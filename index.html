@@ -218,15 +218,7 @@
     <footer class="main-footer">
         <p>&copy; 2025 適当なフッター</p>
     </footer>
-    <script>
-        //dev バルク子
-(function(PID){
-  var script = document.createElement("script");
-  script.src = "https://tracking.sitest.jp/tag?p=" + PID + "&u=" + encodeURIComponent(location.origin + location.pathname + location.search);
-  script.async = true;
-  document.head.appendChild(script);
-})("p6ac483144025a");
-</script>
+
 <script>
     //新タグローカル
 //    (function(PID){
@@ -246,6 +238,21 @@
     //      script_elm.async = true;
     //      document.head.appendChild(script_elm);
     //    })();   
+
+    //旧タグdev バルク子
+
+       (function(){
+         window.sitest_sent_html = document.getElementsByTagName("html")[0].outerHTML;
+         var pid = 'p6ac483144025a';
+         // var pid = '35';
+         var script_elm = document.createElement("script");
+         // script_elm.src = "https://gcapps.local/tracking/sitest_js?p=" + pid + "&dynamic=true";
+         script_elm.src = "https://dev.sitest.jp/tracking/sitest_js?p=" + pid + "&dynamic=true";
+         script_elm.async = true;
+         document.head.appendChild(script_elm);
+       })();   
+
+    
 
 // (function(PID){
 //  var script = document.createElement("script");
